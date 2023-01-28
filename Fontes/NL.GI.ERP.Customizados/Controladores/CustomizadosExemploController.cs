@@ -11,5 +11,9 @@ namespace NL.GI.ERP.Customizados.Controladores
             : base(logger)
         {
         }
+
+        [HttpGet("get-teste")]
+        public IActionResult Get()
+            => Ok("Testado...");
     }
 }
