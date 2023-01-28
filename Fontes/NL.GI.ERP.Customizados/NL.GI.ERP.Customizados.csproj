@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,10 +6,33 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
   <ItemGroup>
-    <Folder Include="Controladores\" />
-    <Folder Include="Modelos\" />
-    <Folder Include="Paginas\" />
+	  <PackageReference Include="Dapper" Version="2.0.123" />
+	  <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+	  <PackageReference Include="Mapster" Version="7.3.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NL.Entidades">
+      <HintPath>..\..\Bibliotecas\NL\NL.Entidades.dll</HintPath>
+    </Reference>
+    <Reference Include="NL.Entidades.IU">
+      <HintPath>..\..\Bibliotecas\NL\NL.Entidades.IU.dll</HintPath>
+    </Reference>
+    <Reference Include="NL.Entidades.IU.AspNetCore">
+      <HintPath>..\..\Bibliotecas\NL\NL.Entidades.IU.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="NL.GI.ERP.Entidades.AspNetCore">
+      <HintPath>..\..\Bibliotecas\NL.GI.ERP\NL.GI.ERP.Entidades.AspNetCore.dll</HintPath>
+    </Reference>
+	  
   </ItemGroup>
 
 </Project>
